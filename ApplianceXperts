@@ -1,0 +1,78 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+
+export default function Home() {
+  return (
+    <main className="p-4 sm:p-6 max-w-7xl mx-auto space-y-10">
+      <section className="text-center space-y-4">
+        <h1 className="text-4xl sm:text-5xl font-bold text-blue-700">St. John's Appliance Repair Service</h1>
+        <p className="text-base sm:text-lg max-w-2xl mx-auto text-gray-700">
+          Reliable, efficient, and customer-focused appliance repair solutions in the St. John's Metro area.
+        </p>
+        <Button className="text-lg">Book a Repair</Button>
+      </section>
+
+      <section className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Card>
+          <CardContent className="p-4">
+            <h2 className="text-xl font-semibold mb-2">Warranty Repairs</h2>
+            <p>Authorized repairs for Samsung, LG, and GE appliances.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4">
+            <h2 className="text-xl font-semibold mb-2">Non-Warranty Repairs</h2>
+            <p>Repairs for all major household appliances.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4">
+            <h2 className="text-xl font-semibold mb-2">Preventive Maintenance</h2>
+            <p>Keep your appliances running efficiently and avoid breakdowns.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4">
+            <h2 className="text-xl font-semibold mb-2">Emergency Services</h2>
+            <p>Quick response for urgent repair needs.</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold">Book a Service</h2>
+        <form className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <input className="p-2 border rounded" type="text" placeholder="Full Name" required />
+          <input className="p-2 border rounded" type="email" placeholder="Email Address" required />
+          <input className="p-2 border rounded" type="tel" placeholder="Phone Number" required />
+          <input className="p-2 border rounded" type="text" placeholder="Appliance Type" required />
+          <textarea className="p-2 border rounded col-span-1 sm:col-span-2" placeholder="Describe the issue..." required></textarea>
+          <label className="sm:col-span-2 text-gray-700">Upload Appliance Data Plate Photo (optional):</label>
+          <input className="p-2 border rounded sm:col-span-2" type="file" accept="image/*" />
+          <Button className="sm:col-span-2">Submit Request</Button>
+        </form>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold">Live Chat</h2>
+        <p className="text-gray-600">Need help now? Use our chat bubble at the bottom right of the screen to talk with a representative instantly.</p>
+        <script async src="https://embed.tawk.to/your_tawkto_property_id/1abcdefgh" charset="UTF-8" crossorigin="*"></script>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold">About Us</h2>
+        <p className="text-gray-700">
+          Locally owned and based in St. John's, Newfoundland, we are committed to excellent service with a team of certified technicians, state-of-the-art tools, and customer-focused support.
+        </p>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold">Contact Us</h2>
+        <p>Email: support@stjohnsappliance.ca</p>
+        <p>Phone: (709) 555-1234</p>
+        <p>Address: 123 Service Lane, St. John's, NL</p>
+      </section>
+    </main>
+  );
+}
